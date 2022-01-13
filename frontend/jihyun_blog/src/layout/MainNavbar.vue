@@ -2,13 +2,13 @@
   <md-toolbar
     id="toolbar"
     md-elevation="0"
-    class="md-transparent md-absolute"
+    class="md-primary"
     :class="extraNavClasses"
     :color-on-scroll="colorOnScroll"
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">Vue Material Kit</h3>
+        <h3 class="md-title">Blog</h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -40,7 +40,7 @@
                         data-toggle="dropdown"
                       >
                         <i class="material-icons">apps</i>
-                        <p>Components</p>
+                        <p>Login</p>
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
                         <li>
@@ -62,24 +62,6 @@
                   </div>
                 </a>
               </li>
-
-              <md-list-item
-                href="https://demos.creative-tim.com/vue-material-kit/documentation/"
-                target="_blank"
-                v-if="showDownload"
-              >
-                <i class="material-icons">content_paste</i>
-                <p>Documentation</p>
-              </md-list-item>
-
-              <md-list-item
-                href="javascript:void(0)"
-                @click="scrollToElement()"
-                v-if="showDownload"
-              >
-                <i class="material-icons">cloud_download</i>
-                <p>Download</p>
-              </md-list-item>
 
               <li class="md-list-item" v-else>
                 <a
@@ -120,7 +102,23 @@
                   </div>
                 </a>
               </li>
+              <div class="md-collapse">
+                  <md-list>
+                    <md-list-item href="javascript:void(0)">
+                     <a href="#/profile">
+                         <md-icon>account_circle</md-icon>
+                        <p>Profile</p>
+                       </a>
+                    </md-list-item>
 
+                    <md-list-item href="javascript:void(0)">
+                      <md-icon>settings</md-icon>
+                      <p>Settings</p>
+                    </md-list-item>
+                  </md-list>
+                </div>
+
+<!--
               <md-list-item
                 href="https://twitter.com/CreativeTim"
                 target="_blank"
@@ -151,6 +149,7 @@
                   >Follow us on Instagram</md-tooltip
                 >
               </md-list-item>
+ -->
             </md-list>
           </div>
         </div>
